@@ -1,0 +1,121 @@
+.skills{
+    @include flex;
+    flex-direction: column;
+    padding:rem(50px) 0;
+    width: rem(1140px);
+    margin: 0 auto;
+
+    &__title{
+        font-size:rem(30px);
+        font-weight:600;
+    }
+
+    &__info{
+        font-size:rem(20px)
+    }
+
+    &__categories{
+        @include flex;
+        width:100%;
+        margin: rem(50px) 0;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__card{
+        @include flex;
+        flex-direction: column;
+        padding: rem(20px);
+        cursor: pointer;
+        width: 33%;
+
+        &:hover{
+            //border:1px solid #cccccc;
+            border-radius: rem(10px);
+            box-shadow:0px 0px 8px #9eb6c5;
+            animation: zoomCard .2s ease-in-out forwards;
+        }
+
+        h2{
+            margin:rem(20px) 0;
+        }
+
+        svg{
+            height:rem(28px);
+            width:rem(28px);
+            fill: #6ecef1;
+        }
+
+        &-icon{
+            height: rem(80px);
+            width: rem(80px);
+            border: 2px solid #6ecef1;
+            border-radius:50%;
+            @include flex;
+        }
+
+        ul{
+            text-align: center;
+
+            li{
+                margin:rem(10px) 0;
+            }
+        }
+    }
+
+    &__tools{
+        @include flex;
+        width: 100%;
+        justify-content: space-between;
+
+        &-item{
+            box-shadow:0px 0px 8px #9eb6c5;
+            padding: rem(10px);
+            @include flex;
+            flex-direction: column;
+            border-radius: 3px;
+            height: rem(120px);          
+            border: 1px solid #6ecef1;
+
+            &:hover{
+                animation: zoomCard .2s ease-in-out forwards;
+                cursor: pointer;
+            }
+
+            &:not(:last-child){
+                margin-right:rem(10px)
+            }
+
+            img{
+                height:rem(80px);
+                width: rem(80px);
+            }
+
+            span{
+                font-size: rem(12px);
+                font-weight: 600;
+                display: inline-block;
+                width: 100%;
+                text-align:center
+            }
+        }
+
+        .slick-prev .slick-arrow{
+            display: none !important;
+        }
+    }
+}
+
+.skills__tools{
+    .slick-arrow{
+        display: none !important;
+    }
+
+    .slick-initialized{
+        .slick-slider{
+            display: flex !important;
+            
+        }
+    }
+}
+

@@ -1,0 +1,37 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:rem(80px);
+    background-color: #262626;
+    opacity: .6;
+    z-index: 1000;
+
+    &__content{
+        max-width: rem(1140px);
+        margin:0 auto;
+        @include flex;
+        justify-content:space-between;
+        color: #fff;
+        height: 100%;
+    }
+
+    &__logo{
+        font-family: 'Dancing Script';
+        font-size:rem(24px);
+        font-weight:600;
+    }
+
+    &__items{
+        @include flex;
+        
+        li{
+            margin: 0 rem(30px);
+            cursor: pointer;
+            align-items: center;
+            @include flex;
+            flex-direction: column;
+        }
+    }
+}

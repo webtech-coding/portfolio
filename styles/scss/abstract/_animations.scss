@@ -1,0 +1,23 @@
+@keyframes roller {
+    0%{
+        transform: translateY(0);
+        opacity: 1
+    }
+    50%{
+        transform: translateY(15px);
+        opacity:.4 ;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomCard {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-8px);
+    }
+}

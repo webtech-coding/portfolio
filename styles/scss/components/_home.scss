@@ -1,0 +1,134 @@
+.home{
+   background-color: #202020;
+   background-image: url('./../../../resources/seamlessbg.svg');
+   //background-size: cover;
+   //background-repeat: no-repeat;  
+   background-repeat: repeat; 
+   height: calc(100vh - 80px);
+   width: 100vw;
+   @include flex;
+   position: relative;
+   margin-top: rem(80px);
+/*
+   &::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: .8;
+    content:"";
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+   }
+   */
+
+   &__content{
+    width: rem(1140px);
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(-50%);
+    z-index: 1000;
+   }
+
+   &__legend{
+    @include flex;
+    justify-content: flex-start;
+    //color: rgb(189, 189, 189);
+    color: #fff;
+    font-weight: 600;
+
+    p{
+        font-size:rem(24px);
+    }
+    img{
+        height:rem(24px);
+        margin-left: rem(10px);
+    }
+   }
+
+   &__title{
+    font-size: rem(64px);
+    //color: rgb(189, 189, 189);
+    color: #fff;
+    margin-top: rem(10px);
+    font-weight: 600;
+    line-height: 1.2;
+   }
+
+   &__info{
+    //color: rgb(189, 189, 189);
+    color: #fff;
+    margin-top: rem(20px);
+    font-size: rem(24px);
+   
+   }
+
+   &__buttons{
+    @include flex;
+    margin-top: rem(10px);
+    line-height: 1.2;
+    justify-content: flex-start;
+
+    &-icon {
+        padding: rem(10px) rem(20px);
+        border: 1px solid rgb(189, 189, 189);
+        @include flex;
+        margin-right: rem(10px);
+        cursor: pointer;
+    }    
+
+    svg{
+        height:rem(20px);
+        width:rem(20px);
+        fill: rgb(189, 189, 189);
+    }
+
+    span{
+        color: rgb(189, 189, 189);
+        padding:rem(10px);
+    }
+   }
+
+   &__cursor{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flex;
+    flex-direction: column;
+    border: 1px solid rgb(189, 189, 189);
+    height: rem(50px);
+    width: rem(30px);
+    border-radius: rem(20px);
+    cursor: pointer;
+    justify-content:space-between;
+
+    &:hover{
+        span{
+            animation-play-state: paused;
+        }
+    }
+    
+    &-track{
+        flex: 1;
+        
+    }
+
+    span{
+        height:5px;
+        width: 5px;
+        background-color:rgb(189, 189, 189);
+        border-radius: 50%;
+        display: inline-block;
+        animation: roller 2s ease-in-out infinite;
+    }
+
+    svg{
+        height: rem(24px);
+        width: rem(24px);
+        fill: #fff;
+    }
+   }
+}

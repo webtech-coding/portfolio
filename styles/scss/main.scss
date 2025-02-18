@@ -1,0 +1,17 @@
+
+
+//abstract
+@import './abstract/variables';
+@import './abstract/functions';
+@import './abstract/mixins';
+@import './abstract/animations';
+
+//base
+@import './base/reset';
+@import './base/typography';
+
+//components
+@import './components/home';
+@import './components/nav';
+@import './components/skills';
+@import './components/work-history';
